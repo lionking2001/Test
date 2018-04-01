@@ -1,0 +1,18 @@
+<!--<ngx-qrcode qrc-element-type="url" [qrc-value]="ngxQrcode2"></ngx-qrcode>-->
+<!--<ngx-qrcode qrc-element-type="url" [qrc-value]="techiediaries" ></ngx-qrcode>-->
+<!--<ngx-qrcode qrc-element-type="url" [qrc-value]="letsboot" ></ngx-qrcode>-->
+<form class="col md6" (ngSubmit)="sendValues()">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="barcode" [(ngModel)]="barcode" name="barcode" placeholder="Placeholder" type="text" class="validate">
+      <label for="barcode">Barcode Label</label>
+    </div>
+  </div>
+  <input type="submit" (click)="sendValues()" class="waves-effect waves-light btn"/>
+  <form>
+    <div>
+      <ngx-qrcode qrc-element-type="url" [qrc-value]="barcode"></ngx-qrcode>
+    </div>
+  </form>
+</form>
+
